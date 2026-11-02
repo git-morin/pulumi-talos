@@ -132,6 +132,17 @@
         }
     },
     "auto-settings": {},
+    "default-resource-schema-fixups": {
+        "resources": {
+            "talos_cluster": {},
+            "talos_cluster_kubeconfig": {},
+            "talos_image_factory_schematic": {},
+            "talos_machine": {},
+            "talos_machine_bootstrap": {},
+            "talos_machine_configuration_apply": {},
+            "talos_machine_secrets": {}
+        }
+    },
     "functions": {
         "talos:client/configuration:Configuration": "talos_client_configuration",
         "talos:cluster/kubeconfig:Kubeconfig": "talos_cluster_kubeconfig",
