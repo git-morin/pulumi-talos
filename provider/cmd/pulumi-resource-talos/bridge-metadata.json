@@ -1,11 +1,22 @@
 {
     "auto-aliasing": {
         "resources": {
+            "talos_cluster": {
+                "current": "talos:cluster/cluster:Cluster",
+                "fields": {
+                    "control_plane_nodes": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "talos_cluster_kubeconfig": {
                 "current": "talos:cluster/kubeconfig:Kubeconfig"
             },
             "talos_image_factory_schematic": {
                 "current": "talos:imageFactory/schematic:Schematic"
+            },
+            "talos_machine": {
+                "current": "talos:machine/machine:Machine"
             },
             "talos_machine_bootstrap": {
                 "current": "talos:machine/bootstrap:Bootstrap"

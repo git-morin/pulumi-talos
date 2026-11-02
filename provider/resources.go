@@ -268,6 +268,15 @@ func Provider() tfbridge.ProviderInfo {
 			},
 		},
 		Resources: map[string]*tfbridge.ResourceInfo{
+			// terraform-provider-talos v0.12.0 added these two resources whose
+			// names are exactly their module prefix, so stripping "talos_"
+			// leaves no name for KnownModules to tokenize. Map them by hand.
+			"talos_cluster": {
+				Tok: tfbridge.MakeResource(talosPkg, clusterMod, "Cluster"),
+			},
+			"talos_machine": {
+				Tok: tfbridge.MakeResource(talosPkg, machineMod, "Machine"),
+			},
 			"talos_image_factory_schematic": {
 				Fields: map[string]*tfbridge.SchemaInfo{
 					"schematic": {
